@@ -21,8 +21,8 @@ def main():
             #print words
             score = 0
             for i in range(len(words)):
-               # print words[i].lower()
-                score += scores[str(words[i].lower())]
+                if str(words[i].lower()) in scores:
+                    score += scores[str(words[i].lower())]
             print float(score)
     hw()
     lines(afinnfile)
