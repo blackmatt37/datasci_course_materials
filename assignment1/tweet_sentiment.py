@@ -15,13 +15,15 @@ def main():
         scores[term] = int(score)
     for line in tweet_file:
         tweet = json.loads(line)
-        text = tweet["text"]
-        words = text.split(" ")
-        print words
-        score = 0
-        for word in words:
-            score += scores[word.lower()]
-        print float(score)
+        if 'text' in tweet:
+            text = tweet["text"]
+            words = text.split(" ")
+            #print words
+            score = 0
+            for i in range(len(words)):
+               # print words[i].lower()
+                score += scores[str(words[i].lower())]
+            print float(score)
     hw()
     lines(afinnfile)
     lines(tweet_file)
