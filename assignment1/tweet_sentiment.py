@@ -24,9 +24,9 @@ def main():
                 if str(words[i].lower()) in scores:
                     score += scores[str(words[i].lower())]
             print float(score)
-    hw()
-    lines(afinnfile)
-    lines(tweet_file)
+   # hw()
+    #lines(afinnfile)
+    #lines(tweet_file)
 
 if __name__ == '__main__':
     main()
