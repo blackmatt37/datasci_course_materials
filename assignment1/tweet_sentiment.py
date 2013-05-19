@@ -16,7 +16,7 @@ def main():
     for line in tweet_file:
         tweet = json.loads(line)
         text = tweet["text"]
-        words = text.split[" "]
+        words = text.split(" ")
         score = 0
         for word in words:
             score += scores[word]
