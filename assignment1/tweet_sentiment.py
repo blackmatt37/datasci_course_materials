@@ -17,9 +17,10 @@ def main():
         tweet = json.loads(line)
         text = tweet["text"]
         words = text.split(" ")
+        print words
         score = 0
         for word in words:
-            score += scores[word]
+            score += scores[word.lower()]
         print float(score)
     hw()
     lines(afinnfile)
