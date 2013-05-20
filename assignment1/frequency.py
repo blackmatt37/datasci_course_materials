@@ -28,10 +28,12 @@ def main():
     allTotal = 0.0
    # print total
     words = list(total.keys())
+    builder = ""
     for i in range(len(words)):
-        print "L" + words[i] + "L"
+        builder +="L" + words[i] + "L\n"
         if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
             allTotal += total[words[i]]
+    print builder
     for i in range(len(words)):
         thing = float(total[words[i]]/float(allTotal))
         if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
