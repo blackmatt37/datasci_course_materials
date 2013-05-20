@@ -33,7 +33,7 @@ def main():
                     else:
                         unscored[text[i].lower()].append(float(number))
     words = list(unscored.keys())
-    print unscored
+    #print unscored
     for i in range(len(words)):
         print words[i], sum(unscored[words[i]])/len(unscored[words[i]])
                 
