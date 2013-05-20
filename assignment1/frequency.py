@@ -26,7 +26,7 @@ def main():
                 else:
                     total[text[i].lower()] += 1
     allTotal = 0.0
-    print total
+   # print total
     words = list(total.keys())
     for i in range(len(words)):
         allTotal += total[words[i]]
