@@ -29,11 +29,11 @@ def main():
    # print total
     words = list(total.keys())
     for i in range(len(words)):
-        if len(words[i]) >= 1:
+        if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
             allTotal += total[words[i]]
     for i in range(len(words)):
         thing = float(total[words[i]]/float(allTotal))
-        if len(words[i]) >= 1:
+        if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
             print words[i], thing
                 
                     
