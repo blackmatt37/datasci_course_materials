@@ -30,7 +30,7 @@ def main():
     words = list(total.keys())
     builder = ""
     for i in range(len(words)):
-        builder +="L" + words[i] + "L\n"
+        builder +="L" + words[i] + "L  "
         if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
             allTotal += total[words[i]]
     print builder
