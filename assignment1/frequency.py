@@ -19,25 +19,20 @@ def main():
     for line in tweet_file:
         tweet = json.loads(str(line))
         if 'text' in tweet:
-            text = tweet["text"].split(" ")
+            text = tweet["text"].split()
             for i in range(len(text)):
-                if text[i].lower not in total:
+                if text[i].lower not in total and text[i].lower().split() != "":
                     total[text[i].lower()] = 1
                 else:
                     total[text[i].lower()] += 1
     allTotal = 0.0
    # print total
     words = list(total.keys())
-    builder = ""
     for i in range(len(words)):
-        builder +="L" + words[i] + "L  "
-        if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
-            allTotal += total[words[i]]
-    print builder
+        allTotal += total[words[i]]
     for i in range(len(words)):
         thing = float(total[words[i]]/float(allTotal))
-        if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
-            print words[i], thing
+        print words[i].encode('utf-8'), thing
                 
                     
     #hw()
