@@ -29,10 +29,12 @@ def main():
    # print total
     words = list(total.keys())
     for i in range(len(words)):
-        allTotal += total[words[i]]
+        if len(words[i]) >= 1:
+            allTotal += total[words[i]]
     for i in range(len(words)):
         thing = float(total[words[i]]/float(allTotal))
-        print words[i], thing
+        if len(words[i]) >= 1:
+            print words[i], thing
                 
                     
     #hw()
