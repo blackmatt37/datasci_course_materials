@@ -29,6 +29,7 @@ def main():
    # print total
     words = list(total.keys())
     for i in range(len(words)):
+        print "L" + words[i] + "L"
         if words[i] != "\n" and words[i] != " " and words[i] != "\r" and words[i] != "" :
             allTotal += total[words[i]]
     for i in range(len(words)):
